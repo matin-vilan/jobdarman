@@ -19,6 +19,9 @@
       }
     ],
     "paths": {
+      "@/libs/*": ["./src/libs/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/apis/*": ["./src/apis/*"],
       "@/*": ["./src/*"]
     }
   },

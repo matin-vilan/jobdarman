@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Full-Stack Authentication Project
+
+This project uses the Next.js framework in a full-stack setup, implementing both backend and frontend for a complete authentication solution.
+
+## Features
+
+- Register Page: Create a new account
+- Login Page: Sign in to an existing account
+- Authenticated Users Page: Redirects to the users page upon login, where the users route is accessed
+
+## Token Management
+
+- Access Token: Expires every minute. Automatically refreshed via the refresh API, handled by an Axios interceptor.
+
+- Refresh Token: Expires every two minutes. Upon expiration, the user is redirected to the login page. The Axios interceptor manages the logout operation.
 
 ## Getting Started
 
-First, run the development server:
+### Setup
+
+1. Copy `.env.example` to `.env` and configure the environment variables.
+
+2. Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  npm install
+  cd my-project
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Start the project:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Development: `npm run dev`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Production: `npm run start`
 
-## Learn More
+## Backend
 
-To learn more about Next.js, take a look at the following resources:
+- The backend is integrated within the project and handles data storage in the `db.json` file.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Backend routes are located in the `app/api` folder.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+- Authentication and route handling are implemented for both frontend and backend.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Git Flow: Not implemented. The project contains only a single branch and commit, as specified by the task requirements.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Notes
+
+All task requirements have been covered, and special emphasis has been placed on the requested functionality.

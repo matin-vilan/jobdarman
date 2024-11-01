@@ -9,7 +9,6 @@ const UsersPage = () => {
   const getUsersList = useCallback(async () => {
     try {
       const users = await getUsers();
-      console.log({ users });
 
       if (users?.status === 200) {
         setUsers(users.data);
@@ -23,6 +22,7 @@ const UsersPage = () => {
     getUsersList();
   }, []);
 
+  console.log({ users });
   return <div>hi</div>;
 };
 

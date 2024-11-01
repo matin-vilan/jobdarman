@@ -13,7 +13,7 @@ const RequireAuth = ({ children }: { children: React.ReactNode }) => {
     }
   }, [accessToken, router]);
 
-  return !!accessToken ? children : null;
+  return accessToken ? children : null;
 };
 
 export default RequireAuth;

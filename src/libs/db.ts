@@ -39,6 +39,7 @@ export const updateData = <T>(
     const jsonData = fs.readFileSync(dbPath, "utf-8");
     const data = JSON.parse(jsonData);
 
+    // @ts-ignore
     const index = data[entity].findIndex((item: T) => item.id === id);
     if (index === -1) {
       throw new Error(`Item with ID ${id} not found`);

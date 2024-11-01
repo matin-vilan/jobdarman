@@ -39,6 +39,24 @@ This project uses the Next.js framework in a full-stack setup, implementing both
 
 - Backend routes are located in the `app/api` folder.
 
+## Backend API Routes
+
+- `/api/auth/login`
+
+- `/api/auth/register`
+
+- `/api/auth/refresh`
+
+- `/api/users`
+
+## Frontend Routes
+
+- `/users`
+
+- `/login`
+
+- `/register`
+
 ## Project Structure
 
 - Authentication and route handling are implemented for both frontend and backend.
